@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "emaily-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,18 @@
     "npm": "6.14.5"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Eghaire, Praise Jomavi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "node": "^16.5.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
