@@ -48,7 +48,7 @@ app.listen(PORT, () => console.log(`App listening on localhost:${PORT}`));
 
 
 
-// importing / requiring
+// require statements
 // app config
 // middleware
 // db config
