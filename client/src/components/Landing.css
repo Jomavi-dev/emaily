@@ -1,0 +1,82 @@
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.landing {
+  width: 98%;
+  margin: 0.2em auto;
+  max-width: 375px;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+
+.landing__hero {
+  width: 100%;
+  object-fit: contain;
+}
+
+.landing__search {
+  background-color: #f6f6f6;
+  padding: 0.5em 0.2em;
+}
+
+.landing__searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 2rem;
+  border-radius: 3000px;
+}
+
+.landing__searchContainer > input {
+  font-size: 0.75rem;
+  font-family: serif;
+  width: 96%;
+  line-height: 1.4;
+  border: none;
+  outline-width: 0;
+  margin-left: 0.5em;
+  color: #00000066;
+  text-align: center;
+}
+
+.landing__searchContainer > input::placeholder {
+  color: #0000001a;
+  text-align: center;
+}
+
+main {
+  /* border-bottom: 1px solid #ccc; */
+  border-radius: 4px;
+  margin-bottom: 0.2em;
+}
+
+aside {
+  border-radius: 4px;
+}
+
+@media (min-width: 425px) {
+  .landing {
+    display: flex;
+    width: 96%;
+    max-width: 1024px;
+  }
+
+  main {
+    flex: 2.5;
+    margin: 0;
+    /* background-color: #b9b9b9; */
+  }
+
+  aside {
+    flex: 1;
+    /* background-color: #d1d3d1; */
+    margin-left: 0.2em;
+  }
+
+  .landing__search {
+    min-height: 86vh;
+  }
+}

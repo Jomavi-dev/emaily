@@ -1,0 +1,65 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #2d3135;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.btn {
+  display: flex;
+  align-self: center;
+  font-family: calibri;
+  font-size: 0.8125rem;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1.5em;
+  cursor: pointer;
+  padding: calc(0.5em - 1px) 1em;
+  /* padding: 0.2em 0.4em; */
+  margin: 0 1em;
+  outline: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: #363636;
+  transition: all 0.3s ease-in;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgb(255, 255, 255), 0 0 0 4.2px #363636;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+.credits_badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  font-size: 11px;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  padding: 1.5em;
+  margin-left: 1em;
+}

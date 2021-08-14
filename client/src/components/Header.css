@@ -1,0 +1,60 @@
+nav {
+  display: flex;
+}
+
+nav a,
+nav Link {
+  color: #2d3135;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav Link:hover {
+  opacity: 0.8;
+}
+
+nav a:focus,
+nav Link:focus {
+  outline: 1px solid #2d3135;
+  outline-offset: 3px;
+}
+
+#navMenu {
+  display: flex;
+  margin-left: auto;
+}
+
+li {
+  display: flex;
+  align-self: center;
+  font-family: calibri;
+  font-size: 0.8125rem;
+  list-style: none;
+}
+
+.header {
+  border-bottom: 1px solid #d3d3d3; /*lightgray*/
+  background-color: #fff;
+  padding: 0.5em 2%;
+  object-fit: contain;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header__brandName {
+  font-size: 1.5rem;
+}
+
+.header__logo {
+  object-fit: contain;
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
+@media (min-width: 425px) {
+}

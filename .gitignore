@@ -1,2 +1,5 @@
 node_modules
 dev.js
+paykey2.png
+
+#  echo 'paykey2.png' >> .gitignore

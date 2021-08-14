@@ -7,7 +7,7 @@ const keys = require('./config/keys');
 require('./models/user');
 require('./services/passport');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(keys.mongoURI, {
   useCreateIndex: true,
@@ -16,6 +16,9 @@ mongoose.connect(keys.mongoURI, {
 });
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded());
 
 app.use(
   cookieSession({
@@ -29,6 +32,16 @@ app.use(passport.session());
 
 // IIFE with paremeter of app
 require('./routes/authRoutes')(app);
+require('./routes/billingRoutes')(app);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
+
+  const path = require('path')
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
 
 app.listen(PORT, () => console.log(`App listening on localhost:${PORT}`));
 
