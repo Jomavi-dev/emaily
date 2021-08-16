@@ -39,7 +39,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #363636;
+  background-color: #dbdbdb;
   transition: all 0.3s ease-in;
 }
 

@@ -14,11 +14,12 @@ mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 app.use(
   cookieSession({
