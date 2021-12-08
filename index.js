@@ -5,11 +5,12 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/user');
+require('./models/survey');
 require('./services/passport');
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(keys.mongoURI, {
+mongoose.connect(keys.mongoURI || 'mongodb://localhost:27017/mailDB', {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -19,7 +20,7 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 const app = express();
 
 app.use(express.json());
-// app.use(express.urlencoded());
+app.use(express.urlencoded());
 
 app.use(
   cookieSession({
@@ -34,6 +35,7 @@ app.use(passport.session());
 // IIFE with paremeter of app
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
